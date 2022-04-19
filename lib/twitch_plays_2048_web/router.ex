@@ -18,6 +18,8 @@ defmodule TwitchPlays2048Web.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+
+    live "/boards", BoardLive.Index, :index
   end
 
   # Other scopes may use custom stacks.

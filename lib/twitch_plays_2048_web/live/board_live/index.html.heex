@@ -1,0 +1,114 @@
+<div class="container">
+    <div class="heading">
+        <h1 class="title">2048</h1>
+        <div class="scores-container">
+            <div class="score-container">
+                0
+                <div class="score-addition">0</div>
+            </div>
+            <div class="best-container">0</div>
+        </div>
+    </div>
+    <div class="above-game">
+        <a class="restart-button">New Game</a>
+    </div>
+    <div class="game-container">
+        <div class="game-message">
+            <p>
+            </p>
+            <div class="lower">
+                <a class="keep-playing-button">Keep Going</a>
+                <a class="retry-button">Try Again?</a>
+                <div class="score-sharing"></div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid-row">
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+                <div class="grid-cell">
+                </div>
+            </div>
+        </div>
+        
+        <%= live_component @socket, TwitchPlays2048Web.BoardLive.BoardComponent, id: "board" %>
+    </div>
+</div>

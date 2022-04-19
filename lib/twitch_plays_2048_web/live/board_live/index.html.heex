@@ -108,7 +108,7 @@
                 </div>
             </div>
         </div>
-        
-        <%= live_component @socket, TwitchPlays2048Web.BoardLive.BoardComponent, id: "board" %>
+
+        <%= live_component @socket, TwitchPlays2048Web.BoardLive.BoardComponent, id: "board", board: @board %>
     </div>
 </div>

@@ -6,7 +6,7 @@ defmodule TwitchPlays2048Web.BoardLive.Index do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, :boards, list_boards())}
+    {:ok, assign(socket, :board, list_boards())}
   end
 
   @impl true
@@ -17,7 +17,7 @@ defmodule TwitchPlays2048Web.BoardLive.Index do
   defp apply_action(socket, :index, _params) do
     socket
     |> assign(:page_title, "Twitch Plays 2048")
-    |> assign(:board, nil)
+    |> assign(:board, list_boards())
   end
 
   @impl true
@@ -29,6 +29,15 @@ defmodule TwitchPlays2048Web.BoardLive.Index do
   end
 
   defp list_boards do
-    Game.list_boards()
+    [
+      [2, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0]
+    ]
+
+    # Game.list_boards()
   end
 end
